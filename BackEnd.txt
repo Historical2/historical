@@ -1,0 +1,31 @@
+Controller
+
+1. Contact us + About us
+2. Home + 기고 칼럼 + Historical
+3. 신간도서
+
+기능
+
+1. 회원가입
+2. 댓글(대댓글)
+3. 글 작성
+4. 검색
+5. 권한
+
+DB
+
+1. Historical DB
+2. 기고 DB
+3. 신간 DB
+4. 계정 DB
+
+성준
+ 컨트롤러3 기능5 신간DB
+ 
+석원
+ 컨트롤러1 기능1,4 계정DB
+ 
+윤서 
+ 컨트롤러2 기능2,3 기고,히스토리컬 DB
+ 
+ 
