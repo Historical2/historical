@@ -1,3 +1,12 @@
+0708.성준
+    book#show action 생성
+    book#index action 생성
+    깃 커밋 
+    위 두가지 액선 삭제후 resources로 교체
+    routes.rb root 추가 
+    resources 맞게 action 추가 및 private, before_action 스켈레톤 생성
+    깃 커밋함
+
 0708.성준 
     log.txt 파일 생성 커밋함
     

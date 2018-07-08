@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  root 'home#index' # 첫 화면(대문)
   get 'info/contact'
 
   get 'info/about'
-
-  get 'book/new'
-
+ 
+  resources :book # 추가 및 수정,삭제는 관리자 권한만 실행
+                  # index, show 만 권한 없는 상태로
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
