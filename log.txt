@@ -1,3 +1,10 @@
 0708.성준 
     log.txt 파일 생성 커밋함
-    log.txt 수정 및 readme 규칙 설멍 추가 커밋함
+    
+    log.txt 수정 및 readme 규칙 설멍 추가 커밋함    
+    
+    컨트롤러 추가 (번호는 BackEnd.txt 기준입니다.)
+        info > 1번 컨트롤러
+        home > 2번 컨트롤러
+        book > 3번 컨트롤러
+    리드미 설명 추가 커밋함 
