@@ -1,3 +1,28 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+  
+.img-responsive {
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 100%;
+}
+
+.end {
+    font-weight: 90px;
+    text-align: right;
+}
+
+footer {
+      background-color: #555;
+      color: white;
+      padding: 50px;
+    }
+
+@media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+}
