@@ -1,0 +1,4 @@
+사용자 권한
+https://luciuschoi.gitbooks.io/exploring_devise/content/user_authorization/
+cancancan rolify
+http://dogbok.tistory.com/87

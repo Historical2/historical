@@ -1,3 +1,12 @@
+0709.성준
+    최상위폴더에 개인자료 파일 LSJ.txt 생성
+    깃 커밋함
+
+0709.자룡
+    index.html 메인홈페이지 전체적인 틀 생성
+    stylesheets.home.scss 반응형을 위한 media쿼리 및 footer 생성
+    img가운데 정렬을 위한 css
+
 0708.성준
     book#show action 생성
     book#index action 생성
