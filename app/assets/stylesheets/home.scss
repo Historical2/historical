@@ -1,24 +1,12 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-  
-.img-responsive {
-    margin-right: auto;
-    margin-left: auto;
-    line-height: 100%;
+
+//
+.visible-xs {
+    display: fixed;
 }
-
-.end {
-    font-weight: 90px;
-    text-align: right;
-}
-
-footer {
-      background-color: #555;
-      color: white;
-      padding: 50px;
-    }
-
+//index css 시작
 @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
@@ -26,3 +14,50 @@ footer {
       }
       .row.content {height: auto;}
 }
+//반응형을 위한 media 속성
+
+.logo-xs {
+    width : 100px;
+}
+ //모바일에 로고 크기 변경
+ 
+.row.content {
+    height: 1500px;
+}
+//왼쪽 nav크기 확장
+
+.logo-md{
+    width: 200px;
+}
+//웹의 로고 크기
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+//
+
+li{text-align: center;}
+//
+
+.img-responsive {
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 100%;
+}
+//사진들 가운데 정렬
+
+.writer {
+    font-weight: 90px;
+    text-align: right;
+}
+//작성자 정렬
+
+footer {
+      background-color: #555;
+      color: white;
+      padding: 50px;
+}
+//footer css
+
+
+//home css끝
