@@ -1,3 +1,13 @@
+0712.석원
+    User 모델 생성
+    migrate 완료
+    User.rb 메소드 추가
+    Gemfile에 bcrypt 주석 해제 및 bundle install
+    
+0710 자룡
+    index.html 디테일 수정
+    stylesheets.home.scss 주석 작업
+
 0709.성준
     최상위폴더에 개인자료 파일 LSJ.txt 생성
     깃 커밋함
