@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 0714 성준
     book 컨트롤러 삭제후 books 로 교체 
     book 모델 생성 
     라우트 수정
     
+=======
+>>>>>>> 8722c4a44c3123844684912d03d28a0cb6d86527
 0710 자룡
     index.html 디테일 수정
     stylesheets.home.scss 주석 작업
