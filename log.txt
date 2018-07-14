@@ -1,8 +1,7 @@
-0712.석원
-    User 모델 생성
-    migrate 완료
-    User.rb 메소드 추가
-    Gemfile에 bcrypt 주석 해제 및 bundle install
+0714 성준
+    book 컨트롤러 삭제후 books 로 교체 
+    book 모델 생성 
+    라우트 수정
     
 0710 자룡
     index.html 디테일 수정

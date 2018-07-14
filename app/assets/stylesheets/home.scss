@@ -6,6 +6,13 @@
 .visible-xs {
     display: fixed;
 }
+
+li {
+    font-weight:bold;
+    margin-top:50px;
+    margin-bottom :50px;
+    font-size:1.5em;
+}
 //index css 시작
 @media screen and (max-width: 767px) {
       .sidenav {
