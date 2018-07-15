@@ -1,8 +1,17 @@
+0715 석원
+    users 컨트롤러 생성
+    routes.rb 수정
+    users 컨트롤러 수정(회원가입시 받을 정보 결정 이후 추후 변경 예정)
+    app/views/users/new.html 수정(회원가입시 받을 정보 결정 이후 추후 변경 예정)
+    
 0714 성준
     book 컨트롤러 삭제후 books 로 교체 
     book 모델 생성 
     라우트 수정
 
+0712 석원
+    user 모델 설계
+    
 0710 자룡
     index.html 디테일 수정
     stylesheets.home.scss 주석 작업
