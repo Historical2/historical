@@ -1,3 +1,15 @@
+<script>
+  $(function() {
+    $('li').click(function(){
+        if($(this).hasClass("active")) {
+          alert(1);
+        } else {
+          alert(2);
+        }
+    });
+  });
+  
+</script>
 <nav class="navbar navbar-inverse visible-xs">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -24,14 +36,15 @@
 
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-2 sidenav hidden-xs">
+    
+    <div class="col-sm-2 sidenav hidden-xs navbar">
       <img src = "home/logo.png" class = "img-circle img-fluid logo-md img-responsive">
       <ul class="nav nav-pills nav-stacked">
-        <li>기고칼럼</li>
-        <li>히스토리컬</li>
-        <li>신간도서</li>
-        <li>contact us</li>
-        <li>about us</li>
+        <li class = "active"id = "column"><a href = "#">기고칼럼</a></li>
+        <li id = "historical"><a href = "#">히스토리컬</a></li>
+        <li id = "newBook"><a href = "#">신간도서</a></li>
+        <li id = "contact"><a href = "#">contact us</a></li>
+        <li id = "about"><a href = "#">about us</a></li>
       </ul><br>
     </div>
 
