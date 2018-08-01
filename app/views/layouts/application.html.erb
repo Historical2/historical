@@ -18,6 +18,7 @@
 <!--vue cdn -->
 
 </head>
+
 <body>
 <!--모바일에서 보여질 nav-->
 <nav class="navbar navbar-inverse visible-xs">
@@ -28,7 +29,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <img src = "home/logo.png" class = "img-circle img-fluid logo-xs">
+      <a href = "/"><img src = "/home/logo.png" class = "img-circle img-fluid logo-xs"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -44,21 +45,21 @@
 <!-- 웹에서 보여질 nav -->
 <nav class="navbar hidden-xs" id ="sideNav">
   
-  <a class="navbar-brand js-scroll-trigger" href="#page-top">
+  <a class="navbar-brand js-scroll-trigger" href="/">
     <span class="d-none d-lg-block">
-      <img class="img-fluid rounded-circle img-profile" src = "home/logo.png">
+      <img class="img-fluid rounded-circle img-profile" src = "/home/logo.png">
     </span>
   </a>
   
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav" style="padding-left: 0px;">
       <li><input type="text" class="form-control" placeholder="Search"></li>
-      <li class="active" id = "column"><a href = "#">기고칼럼</a></li>
-      <li id = "historical"><a href = "#">히스토리컬</a></li>
-      <li id = "newBook"><a href = "#">신간도서</a></li>
+      <li class ="active test" id = "column"><a href = "#">기고칼럼</a></li>
+      <li class = "test" id = "historical"><a href = "#">히스토리컬</a></li>
+      <li class = "test" id = "newBook"><a href = "#">신간도서</a></li>
       <li id = "contact"><a href = "#">contact us</a></li>
       <li id = "about"><a href = "#">about us</a></li>
-      <li id = "facebookc"><img class = "rounded-circle logo" src = "home/facebook.jpg"></li>
+      <li id = "facebookc"><img class = "rounded-circle logo" src = "/home/facebook.jpg"></li>
     </ul>
     
   </div>

@@ -1,3 +1,60 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+h2 {
+  font-size : 45px;
+  font-weight : bold;
+  text-align:center;
+}
+
+.sideContent h3 {
+    font-weight:bolde;
+    font-size: 1.5rem;
+}
+.sideContent p{
+    font-size: 1.3rem;
+    padding:0px;
+}
+
+.sideContent .sideImg {
+    width : 200px;
+    height : 150px;
+}
+
+.profile img {
+    width:60px;
+    height:60px;
+    border-radius: 50% !important;
+}
+.profile .name{
+    font-size: 1.5rem;
+}
+
+.profile {
+    height : 100px;
+    vertical-align:center;
+}
+
+.profile .date { 
+    vertical-align:center;
+    float:right;
+    font-size:1.5rem;
+    height:70px;
+}
+
+.line {
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid black;
+}
+
+.mainContent {
+    width:100%;
+}
+
+.mainContent img {
+    width: 300px;
+    height : 300px;
+    margin-left:auto;
+    margin-right:auto;
+}

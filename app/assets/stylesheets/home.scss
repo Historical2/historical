@@ -14,12 +14,13 @@
 }
 //작성자 css
 
-section {
+.mainSection {
   box-shadow: 2.5px 5px 5px 2.5px grey;
   margin: 5px 12.5px 10px 10px;
   text-align: left;
 }
 //작성자 정렬
+//모든 세션이 아닌 main세션에만 그림자 적용
 //모바일&&CSS 공통 CSS 끝
 
 @media (max-width:768px){
@@ -31,16 +32,19 @@ section {
   padding : 5px;
   margin : 5px 10px 5px 10px;
 }
-section {
+.mainSection {
   padding : 10px;
   font-family: 'Do Hyeon', sans-serif;
   font-size : 20px;
 }
-section h2 {
+
+.mainSection h2 {
   font-size : 45px;
   font-weight : bold;
   padding-left : 5px;
 }
+
+
 p {
   padding : 5px;
 }
@@ -68,13 +72,6 @@ button {
 }
 //사진들 가운데 정렬
 //모바일 CSS 끝
-
-
-
-
-
-
-
 
 
 
@@ -181,10 +178,10 @@ a {
 }
 //왼쪽 네비 글자색, 밑 줄 변경, bootstrap에 색이 적용 되어 있어 important 적용
 
-.active, li:hover {
+.active, .test:hover {
   background-color: rgb(155, 156, 156);
 }
-//메뉴 호버 및 엑티브 클래스 추가
+//메뉴 호버 시 하이라이트 처리를 위해 추가
 
 .navbar-toggle {
   float:left!important;
