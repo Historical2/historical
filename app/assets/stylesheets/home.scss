@@ -2,63 +2,197 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-li {
-    margin-top:50px;
-    margin-bottom :50px;
+//모바일&&CSS 공통 CSS 시작
+.rounded-circle {
+  border-radius: 50% !important;
 }
-//index css 시작
-@media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height: auto;}
-}
-//반응형을 위한 media 속성
+//이미지 원형 css
 
+.writer {
+    font-weight: 90px;
+    text-align: right;
+}
+//작성자 css
+
+section {
+  box-shadow: 2.5px 5px 5px 2.5px grey;
+  margin: 5px 12.5px 10px 10px;
+  text-align: left;
+}
+//작성자 정렬
+//모바일&&CSS 공통 CSS 끝
+
+@media (max-width:768px){
+//모바일 CSS 시작
 .logo-xs {
     width : 100px;
 }
- //모바일에 로고 크기 변경
- 
-.row.content {
-    height: 1500px;
+.mb-section {
+  padding : 5px;
+  margin : 5px 10px 5px 10px;
 }
-//왼쪽 nav크기 확장
-
-.logo-md{
-    width: 200px;
+section {
+  padding : 10px;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size : 20px;
 }
-//웹의 로고 크기
-
-.mb-5 {
-  margin-bottom: 3rem !important;
+section h2 {
+  font-size : 45px;
+  font-weight : bold;
+  padding-left : 5px;
 }
-//
+p {
+  padding : 5px;
+}
+.img-responsive {
+  height : 350px!important;
+  width: 95%;
+  margin-top: 10px;
+}
 
-li{text-align: center;}
-//
+
+//모바일에 로고 크기 변경
+.navbar-header {
+  text-align : center;
+}
 
 .img-responsive {
     margin-right: auto;
     margin-left: auto;
     line-height: 100%;
 }
+
+button {
+  float: left;
+}
+}
 //사진들 가운데 정렬
+//모바일 CSS 끝
 
-.writer {
-    font-weight: 90px;
-    text-align: right;
+
+
+
+
+
+
+
+
+
+//웹버젼 css
+@media (min-width: 768px) {
+  body {
+    padding-top: 0;
+    padding-left: 250px;
+  }
 }
-//작성자 정렬
 
-footer {
-      background-color: #555;
-      color: white;
-      padding: 50px;
+@media (min-width:768px){
+  // .mb-section {
+  //   padding : 5px;
+  //   margin : 5px 10px 5px 10px;
+  // }
+  section {
+    //padding : 10px;
+    font-family: 'Do Hyeon', sans-serif;
+    //font-size : 20px;
+  }
+  section h2 {
+    font-size : 4.5rem;
+    font-weight : bold;
+    padding-left : 5px;
+  }
+  p {
+    padding : 5px;
+  }
+  .img-responsive {
+    height : 350px!important;
+    width: 100%;
+    margin-top: 7.0rem;
+  }
 }
-//footer css
 
 
-//home css끝
+
+//네비바 css
+@media (min-width: 768px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh;
+    background-image:url("city.jpg");
+    background-repeat:no-repeat;
+    background-size: auto 100%;
+    border:0px;
+    border-radius:0px;
+  }
+  //백그라운드 이미지 추가
+  
+  #sideNav .navbar-brand {
+    display: flex;
+    margin: auto auto 150px;
+    padding: 0.5rem;
+  }
+  #sideNav .navbar-brand .img-profile {
+    max-width: 20rem;
+    max-height: 20rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  }
+  //왼쪽 로고 크기 변경 조금 더 크게 만듬
+  #sideNav .navbar-collapse {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: auto;
+  }
+  #sideNav .navbar-collapse .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  #sideNav .navbar-collapse .navbar-nav ul {
+    padding-left: 0px !important;
+  }
+  
+  #sideNav .navbar-collapse .navbar-nav li {
+    font-size:2.5rem;
+    color:white;
+    margin-top:3rem;
+    margin-bottom :3rem;
+    float:none !important;
+    list-style-type:none;
+    }
+    
+    #sideNav .navbar-collapse .navbar-nav li .logo{
+      width:50px;
+      height:50px;
+    }
+    
+}
+
+a {
+  font-weight:bold;
+  color:white !important;
+  text-decoration : none !important;
+}
+//왼쪽 네비 글자색, 밑 줄 변경, bootstrap에 색이 적용 되어 있어 important 적용
+
+.active, li:hover {
+  background-color: rgb(155, 156, 156);
+}
+//메뉴 호버 및 엑티브 클래스 추가
+
+.navbar-toggle {
+  float:left!important;
+}
+//모바일 네비 버튼 왼쪽으로 변경
+
+// .logo-md{
+//     width: 200px;
+// }
+//웹의 로고 크기 (태훈: 자룡형 이거 index 페이지에 없는 클래스인 거 같아서 일단 주석처리 했어요)
+//웹버젼 css 끝

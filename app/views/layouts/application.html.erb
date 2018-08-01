@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
   <title>히스토리컬</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--jquery import -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- 부트스트랩 import -->
 <script src="https://unpkg.com/vue@2.3.3"></script>
@@ -15,7 +19,51 @@
 
 </head>
 <body>
+<!--모바일에서 보여질 nav-->
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <img src = "home/logo.png" class = "img-circle img-fluid logo-xs">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href = "#">기고칼럼</a></li>
+        <li><a href = "#">히스토리컬</a></li>
+        <li><a href = "#">신간도서</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- 모바일에서 보여 질 nav 끝 -->
 
+<!-- 웹에서 보여질 nav -->
+<nav class="navbar hidden-xs" id ="sideNav">
+  
+  <a class="navbar-brand js-scroll-trigger" href="#page-top">
+    <span class="d-none d-lg-block">
+      <img class="img-fluid rounded-circle img-profile" src = "home/logo.png">
+    </span>
+  </a>
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav" style="padding-left: 0px;">
+      <li><input type="text" class="form-control" placeholder="Search"></li>
+      <li class="active" id = "column"><a href = "#">기고칼럼</a></li>
+      <li id = "historical"><a href = "#">히스토리컬</a></li>
+      <li id = "newBook"><a href = "#">신간도서</a></li>
+      <li id = "contact"><a href = "#">contact us</a></li>
+      <li id = "about"><a href = "#">about us</a></li>
+      <li id = "facebookc"><img class = "rounded-circle logo" src = "home/facebook.jpg"></li>
+    </ul>
+    
+  </div>
+</nav>
+<!--웹에서 보여질 nav 끝-->
 <%= yield %>
 
 </body>
