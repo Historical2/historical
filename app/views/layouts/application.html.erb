@@ -7,47 +7,82 @@
   <%= csrf_meta_tags %>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--jquery import -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- 부트스트랩 import -->
-<script src="https://unpkg.com/vue@2.3.3"></script>
-<!--vue cdn -->
+
+  <!-- 주소 옆 로고-->
+  <link rel="apple-touch-icon" sizes="57x57" href="/fa/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/fa/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/fa/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/fa/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/fa/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/fa/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/fa/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/fa/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/fa/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/fa/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fa/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/fa/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fa/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--jquery import -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- 부트스트랩 import -->
+  <script src="https://unpkg.com/vue@2.3.3"></script>
+  <!--vue cdn -->
+<script>
+function openNav() {
+    $("#mySidenav").width("100%");
+}
+
+function closeNav() {
+    $("#mySidenav").width("0%");
+}
+</script>
 
 </head>
 
 <body>
+
 <!--모바일에서 보여질 nav-->
 <nav class="navbar navbar-inverse visible-xs">
   <div class="container-fluid">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" onclick="openNav()">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
       <a href = "/"><img src = "/home/logo.png" class = "img-circle img-fluid logo-xs"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href = "#">기고칼럼</a></li>
-        <li><a href = "#">히스토리컬</a></li>
-        <li><a href = "#">신간도서</a></li>
-      </ul>
+      <input class = "mSearch" type="text" class="form-control" placeholder="Search">
     </div>
   </div>
 </nav>
+
+<!--모바일에서 버튼을 누를 시 나오는 navbar -->
+<div id="mySidenav" class="msidenav">
+  <a href="#" class="closebtn" onclick="closeNav()">X</a>
+  <a href="#">기고칼럼</a>
+  <a href="#">히스토리컬</a>
+  <a href="#">신간도서</a>
+</div>
+
 <!-- 모바일에서 보여 질 nav 끝 -->
 
 <!-- 웹에서 보여질 nav -->
 <nav class="navbar hidden-xs" id ="sideNav">
-  
   <a class="navbar-brand js-scroll-trigger" href="/">
     <span class="d-none d-lg-block">
       <img class="img-fluid rounded-circle img-profile" src = "/home/logo.png">
+      <div class="red flame"></div>
+      <div class="orange flame"></div>
+      <div class="yellow flame"></div>
+      <div class="white flame"></div>
     </span>
   </a>
   
@@ -57,8 +92,15 @@
       <li class ="active test" id = "column"><a href = "#">기고칼럼</a></li>
       <li class = "test" id = "historical"><a href = "#">히스토리컬</a></li>
       <li class = "test" id = "newBook"><a href = "#">신간도서</a></li>
-      <li id = "contact"><a href = "#">contact us</a></li>
-      <li id = "about"><a href = "#">about us</a></li>
+<% if user_signed_in? %>
+  <li><a href="#"><%= current_user.email %></a></li>
+  <li><a href="/users/sign_out">로그아웃</a></li>
+<% else %>
+  <li><a href="/users/sign_up">회원가입</a></li>
+  <li><a href="/users/sign_in">로그인</a></li>
+<% end %>
+      <li id = "contact"><a href = "#">Contact</a></li>
+      <li id = "about"><a href = "#">About</a></li>
       <li id = "facebookc"><img class = "rounded-circle logo" src = "/home/facebook.jpg"></li>
     </ul>
     

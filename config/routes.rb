@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
 
-
   devise_for :users
   root 'home#index' # 첫 화면(대문)
   get 'info/contact'
@@ -11,9 +10,7 @@ Rails.application.routes.draw do
   resources :books # 추가 및 수정,삭제는 관리자 권한만 실행
                   # index, show 만 권한 없는 상태로
   get 'home/index'
-  
-  resources :users, only: [:new, :create]
-  resources :sessions, only: [:new, :create, :destroy]
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
