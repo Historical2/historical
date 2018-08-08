@@ -1,0 +1,7 @@
+<%= form_for @book do |b|
+    f.hidden_field :user_id, value: current_user.id
+    f.text_field :title, label: "제목"
+    f.text_area :content, label: 'book', class: "tinymce", rows:10, cols:100 
+    tinymce    
+    f.subimt
+ end %>
