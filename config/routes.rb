@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+
   root 'home#index' # 첫 화면(대문)
   get 'info/contact'
 

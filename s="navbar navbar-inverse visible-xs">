@@ -1,0 +1,564 @@
+[1mdiff --git a/app/assets/stylesheets/home.scss b/app/assets/stylesheets/home.scss[m
+[1mindex 1a8d23b..d399950 100644[m
+[1m--- a/app/assets/stylesheets/home.scss[m
+[1m+++ b/app/assets/stylesheets/home.scss[m
+[36m@@ -2,63 +2,197 @@[m
+ // They will automatically be included in application.css.[m
+ // You can use Sass (SCSS) here: http://sass-lang.com/[m
+ [m
+[32m+[m[32m//모바일&&CSS 공통 CSS 시작[m
+[32m+[m[32m.rounded-circle {[m
+[32m+[m[32m  border-radius: 50% !important;[m
+[32m+[m[32m}[m
+[32m+[m[32m//이미지 원형 css[m
+ [m
+[31m-li {[m
+[31m-    margin-top:50px;[m
+[31m-    margin-bottom :50px;[m
+[32m+[m[32m.writer {[m
+[32m+[m[32m    font-weight: 90px;[m
+[32m+[m[32m    text-align: right;[m
+ }[m
+[31m-//index css 시작[m
+[31m-@media screen and (max-width: 767px) {[m
+[31m-      .sidenav {[m
+[31m-        height: auto;[m
+[31m-        padding: 15px;[m
+[31m-      }[m
+[31m-      .row.content {height: auto;}[m
+[32m+[m[32m//작성자 css[m
+[32m+[m
+[32m+[m[32msection {[m
+[32m+[m[32m  box-shadow: 2.5px 5px 5px 2.5px grey;[m
+[32m+[m[32m  margin: 5px 12.5px 10px 10px;[m
+[32m+[m[32m  text-align: left;[m
+ }[m
+[31m-//반응형을 위한 media 속성[m
+[32m+[m[32m//작성자 정렬[m
+[32m+[m[32m//모바일&&CSS 공통 CSS 끝[m
+ [m
+[32m+[m[32m@media (max-width:768px){[m
+[32m+[m[32m//모바일 CSS 시작[m
+ .logo-xs {[m
+     width : 100px;[m
+ }[m
+[31m- //모바일에 로고 크기 변경[m
+[31m- [m
+[31m-.row.content {[m
+[31m-    height: 1500px;[m
+[32m+[m[32m.mb-section {[m
+[32m+[m[32m  padding : 5px;[m
+[32m+[m[32m  margin : 5px 10px 5px 10px;[m
+ }[m
+[31m-//왼쪽 nav크기 확장[m
+[31m-[m
+[31m-.logo-md{[m
+[31m-    width: 200px;[m
+[32m+[m[32msection {[m
+[32m+[m[32m  padding : 10px;[m
+[32m+[m[32m  font-family: 'Do Hyeon', sans-serif;[m
+[32m+[m[32m  font-size : 20px;[m
+ }[m
+[31m-//웹의 로고 크기[m
+[31m-[m
+[31m-.mb-5 {[m
+[31m-  margin-bottom: 3rem !important;[m
+[32m+[m[32msection h2 {[m
+[32m+[m[32m  font-size : 45px;[m
+[32m+[m[32m  font-weight : bold;[m
+[32m+[m[32m  padding-left : 5px;[m
+ }[m
+[31m-//[m
+[32m+[m[32mp {[m
+[32m+[m[32m  padding : 5px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.img-responsive {[m
+[32m+[m[32m  height : 350px!important;[m
+[32m+[m[32m  width: 95%;[m
+[32m+[m[32m  margin-top: 10px;[m
+[32m+[m[32m}[m
+[32m+[m
+ [m
+[31m-li{text-align: center;}[m
+[31m-//[m
+[32m+[m[32m//모바일에 로고 크기 변경[m
+[32m+[m[32m.navbar-header {[m
+[32m+[m[32m  text-align : center;[m
+[32m+[m[32m}[m
+ [m
+ .img-responsive {[m
+     margin-right: auto;[m
+     margin-left: auto;[m
+     line-height: 100%;[m
+ }[m
+[32m+[m
+[32m+[m[32mbutton {[m
+[32m+[m[32m  float: left;[m
+[32m+[m[32m}[m
+[32m+[m[32m}[m
+ //사진들 가운데 정렬[m
+[32m+[m[32m//모바일 CSS 끝[m
+ [m
+[31m-.writer {[m
+[31m-    font-weight: 90px;[m
+[31m-    text-align: right;[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m//웹버젼 css[m
+[32m+[m[32m@media (min-width: 768px) {[m
+[32m+[m[32m  body {[m
+[32m+[m[32m    padding-top: 0;[m
+[32m+[m[32m    padding-left: 250px;[m
+[32m+[m[32m  }[m
+ }[m
+[31m-//작성자 정렬[m
+ [m
+[31m-footer {[m
+[31m-      background-color: #555;[m
+[31m-      color: white;[m
+[31m-      padding: 50px;[m
+[32m+[m[32m@media (min-width:768px){[m
+[32m+[m[32m  // .mb-section {[m
+[32m+[m[32m  //   padding : 5px;[m
+[32m+[m[32m  //   margin : 5px 10px 5px 10px;[m
+[32m+[m[32m  // }[m
+[32m+[m[32m  section {[m
+[32m+[m[32m    //padding : 10px;[m
+[32m+[m[32m    font-family: 'Do Hyeon', sans-serif;[m
+[32m+[m[32m    //font-size : 20px;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  section h2 {[m
+[32m+[m[32m    font-size : 4.5rem;[m
+[32m+[m[32m    font-weight : bold;[m
+[32m+[m[32m    padding-left : 5px;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  p {[m
+[32m+[m[32m    padding : 5px;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  .img-responsive {[m
+[32m+[m[32m    height : 350px!important;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    margin-top: 7.0rem;[m
+[32m+[m[32m  }[m
+ }[m
+[31m-//footer css[m
+ [m
+ [m
+[31m-//home css끝[m
+\ No newline at end of file[m
+[32m+[m
+[32m+[m[32m//네비바 css[m
+[32m+[m[32m@media (min-width: 768px) {[m
+[32m+[m[32m  #sideNav {[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    position: fixed;[m
+[32m+[m[32m    top: 0;[m
+[32m+[m[32m    left: 0;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    width: 250px;[m
+[32m+[m[32m    height: 100vh;[m
+[32m+[m[32m    background-image:url("city.jpg");[m
+[32m+[m[32m    background-repeat:no-repeat;[m
+[32m+[m[32m    background-size: auto 100%;[m
+[32m+[m[32m    border:0px;[m
+[32m+[m[32m    border-radius:0px;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  //백그라운드 이미지 추가[m
+[32m+[m[41m  [m
+[32m+[m[32m  #sideNav .navbar-brand {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    margin: auto auto 150px;[m
+[32m+[m[32m    padding: 0.5rem;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  #sideNav .navbar-brand .img-profile {[m
+[32m+[m[32m    max-width: 20rem;[m
+[32m+[m[32m    max-height: 20rem;[m
+[32m+[m[32m    border: 0.5rem solid rgba(255, 255, 255, 0.2);[m
+[32m+[m[32m  }[m
+[32m+[m[32m  //왼쪽 로고 크기 변경 조금 더 크게 만듬[m
+[32m+[m[32m  #sideNav .navbar-collapse {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    align-items: flex-start;[m
+[32m+[m[32m    flex-grow: 0;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    margin-bottom: auto;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  #sideNav .navbar-collapse .navbar-nav {[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m  }[m
+[32m+[m[32m  #sideNav .navbar-collapse .navbar-nav ul {[m
+[32m+[m[32m    padding-left: 0px !important;[m
+[32m+[m[32m  }[m
+[32m+[m[41m  [m
+[32m+[m[32m  #sideNav .navbar-collapse .navbar-nav li {[m
+[32m+[m[32m    font-size:2.5rem;[m
+[32m+[m[32m    color:white;[m
+[32m+[m[32m    margin-top:3rem;[m
+[32m+[m[32m    margin-bottom :3rem;[m
+[32m+[m[32m    float:none !important;[m
+[32m+[m[32m    list-style-type:none;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    #sideNav .navbar-collapse .navbar-nav li .logo{[m
+[32m+[m[32m      width:50px;[m
+[32m+[m[32m      height:50px;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32ma {[m
+[32m+[m[32m  font-weight:bold;[m
+[32m+[m[32m  color:white !important;[m
+[32m+[m[32m  text-decoration : none !important;[m
+[32m+[m[32m}[m
+[32m+[m[32m//왼쪽 네비 글자색, 밑 줄 변경, bootstrap에 색이 적용 되어 있어 important 적용[m
+[32m+[m
+[32m+[m[32m.active, li:hover {[m
+[32m+[m[32m  background-color: rgb(155, 156, 156);[m
+[32m+[m[32m}[m
+[32m+[m[32m//메뉴 호버 및 엑티브 클래스 추가[m
+[32m+[m
+[32m+[m[32m.navbar-toggle {[m
+[32m+[m[32m  float:left!important;[m
+[32m+[m[32m}[m
+[32m+[m[32m//모바일 네비 버튼 왼쪽으로 변경[m
+[32m+[m
+[32m+[m[32m// .logo-md{[m
+[32m+[m[32m//     width: 200px;[m
+[32m+[m[32m// }[m
+[32m+[m[32m//웹의 로고 크기 (태훈: 자룡형 이거 index 페이지에 없는 클래스인 거 같아서 일단 주석처리 했어요)[m
+[32m+[m[32m//웹버젼 css 끝[m
+\ No newline at end of file[m
+[1mdiff --git a/app/controllers/users_controller.rb b/app/controllers/users_controller.rb[m
+[1mindex 82bc0d6..2e06d8b 100644[m
+[1m--- a/app/controllers/users_controller.rb[m
+[1m+++ b/app/controllers/users_controller.rb[m
+[36m@@ -9,4 +9,4 @@[m [mclass UsersController < ApplicationController[m
+                 name: params[:name])[m
+     redirect_to '/'[m
+   end[m
+[31m-end[m
+[32m+[m[32mend[m
+\ No newline at end of file[m
+[1mdiff --git a/app/views/home/index.html.erb b/app/views/home/index.html.erb[m
+[1mindex 6c03893..a9ca941 100644[m
+[1m--- a/app/views/home/index.html.erb[m
+[1m+++ b/app/views/home/index.html.erb[m
+[36m@@ -2,131 +2,125 @@[m
+   $(function() {[m
+     $('li').click(function(){[m
+         if($(this).hasClass("active")) {[m
+[31m-          alert(1);[m
+[32m+[m
+         } else {[m
+[31m-          alert(2);[m
+[32m+[m
+         }[m
+     });[m
+   });[m
+[31m-  [m
+ </script>[m
+[31m-<nav class="navbar navbar-inverse visible-xs">[m
+[31m-  <div class="container-fluid">[m
+[31m-    <div class="navbar-header">[m
+[31m-      <img src = "home/logo.png" class = "img-circle img-fluid logo-xs">[m
+[31m-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">[m
+[31m-        <span class="icon-bar"></span>[m
+[31m-        <span class="icon-bar"></span>[m
+[31m-        <span class="icon-bar"></span>                        [m
+[31m-      </button>[m
+[31m-      [m
+[31m-    </div>[m
+[31m-    [m
+[31m-    <div class="collapse navbar-collapse" id="myNavbar">[m
+[31m-      <ul class="nav navbar-nav">[m
+[31m-        <li><a href = "#">기고칼럼</a></li>[m
+[31m-        <li><a href = "#">히스토리컬</a></li>[m
+[31m-        <li><a href = "#">신간도서</a></li>[m
+[31m-      </ul>[m
+[31m-    </div>[m
+[31m-    [m
+[31m-  </div>[m
+[31m-</nav>[m
+ [m
+ [m
+[32m+[m[32m<!--내용들 -->[m
+ <div class="container-fluid">[m
+[31m-  <div class="row content">[m
+[31m-    [m
+[31m-    <div class="col-sm-2 sidenav hidden-xs navbar">[m
+[31m-      <img src = "home/logo.png" class = "img-circle img-fluid logo-md img-responsive">[m
+[31m-      <ul class="nav nav-pills nav-stacked">[m
+[31m-        <li class = "active"id = "column"><a href = "#">기고칼럼</a></li>[m
+[31m-        <li id = "historical"><a href = "#">히스토리컬</a></li>[m
+[31m-        <li id = "newBook"><a href = "#">신간도서</a></li>[m
+[31m-        <li id = "contact"><a href = "#">contact us</a></li>[m
+[31m-        <li id = "about"><a href = "#">about us</a></li>[m
+[31m-      </ul><br>[m
+[31m-    </div>[m
+[31m-[m
+[31m-    <article class="col-sm-10">[m
+[31m-        <div class = "row mb-5" >[m
+[31m-          <section class = "col-sm-4">[m
+[32m+[m[32m   <article>[m
+[32m+[m[32m      <div class = "row mb-6" >[m
+[32m+[m[32m        <div class = "col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+             <img src = "home/his.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+               <p>영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[41m              [m
+                </p>[m
+                <p class = "writer">by 구자룡</p>[m
+           </section>[m
+[31m-[m
+[31m-          <section class = "col-sm-4">[m
+[31m-            <img src = "home/his.png" class="img-rounded img-responsive">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+[32m+[m[32m            <img src = "home/his2.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+               <p>영국의 외교관, 역사학자이자한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+               <p class = "writer">by 이동해</p>[m
+           </section>[m
+[31m-[m
+[31m-          <section class = "col-sm-4">[m
+[31m-            <img src = "home/his.png" class="img-rounded img-responsive">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+[32m+[m[32m            <img src = "home/his3.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+               <p>영국의 외교관, 역사학자이자 단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+               <p class = "writer">by 이성준</p>[m
+           </section>[m
+[31m-      </div>[m
+[31m-[m
+[31m-        <div class = "row mb-5">[m
+[31m-          <section class = "col-sm-4">[m
+[31m-            <img src = "home/his.png" class="img-rounded img-responsive">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m  </article>[m
+[32m+[m[41m  [m
+[32m+[m[32m   <article>[m
+[32m+[m[32m      <div class = "row mb-5" >[m
+[32m+[m[32m        <div class = "col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+[32m+[m[32m            <img src = "home/his4.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+[31m-              <p>영국의 외교관, 역사학자이자 정단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              <p>영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+                </p>[m
+                <p class = "writer">by 구자룡</p>[m
+           </section>[m
+[31m-[m
+[31m-          <section class = "col-sm-4">[m
+[31m-            <img src = "home/his.png" class="img-rounded img-responsive">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+[32m+[m[32m            <img src = "home/his5.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+[31m-              <p>영국의 외교관, 역사학자이브리지 대학교의 트리니티 칼리지를 졸업하였다. 1차대전 시기부터 전간기 말까지 영국 외무부에서 외교관으로 근무했으며, 1936년 사임한 후 학자의 길을 걸었다. 그의 이름을 떨친 저작은 역사철학에 관한 서적인 "역사란 무엇인가"와 현실주의 국제정치학의 명저 "20년의 위기"이지만, 정작 그가 평생을 바친 연구대상은 역사철학이나 국제정치학이 아니라 소련사였다. 카는 소련사 분야에서도 걸출한 연구자였으나 소련편향적으로 역사를 서술한다고 비판도 많이 받았는데[1], 덕분에 군사독재 시절 한국에선 "역사란 무엇인가"를 비롯한 그의 저작이 불온서적 취급을 받기도 했다.[m
+[31m-                카는 "역사란 무엇인가"에서 '역사란 단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+[31m-                <p class = "writer">by 이동해</p>[m
+[32m+[m[32m              <p>영국의 외교관, 역사학자이자한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+[32m+[m[32m              <p class = "writer">by 이동해</p>[m
+           </section>[m
+[31m-[m
+[31m-          <section class = "col-sm-4">[m
+[31m-            <img src = "home/his.png" class="img-rounded img-responsive">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class = "col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+[32m+[m[32m            <img src = "home/his6.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+[31m-              <p>영국의 외교관, 역사학자'역사란 단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+[31m-                <p class = "writer">by 이성준</p>[m
+[32m+[m[32m              <p>영국의 외교관, 역사학자이자 단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+[32m+[m[32m              <p class = "writer">by 이성준</p>[m
+           </section>[m
+[31m-      </div>[m
+[31m-[m
+[31m-        <div class = "row mb-5">[m
+[31m-          <section class = "col-sm-4">[m
+[31m-            <img src = "home/his.png" class="img-rounded img-responsive">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m  </article>[m
+[32m+[m[41m  [m
+[32m+[m[32m     <article>[m
+[32m+[m[32m      <div class = "row mb-5" >[m
+[32m+[m[32m        <div class = "col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+[32m+[m[32m            <img src = "home/his7.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+[31m-              <p>영국의 외교관, 역사학'역사란 단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              <p>영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[32m              영국의 외교관,  단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.[m
+[32m+[m[41m              [m
+                </p>[m
+[31m-                <p class = "writer">by 구자룡</p>[m
+[32m+[m[32m               <p class = "writer">by 구자룡</p>[m
+           </section>[m
+[31m-[m
+[31m-          <section class = "col-sm-4">[m
+[31m-            <img src = "home/his.png" class="img-rounded img-responsive">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class = "col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+[32m+[m[32m            <img src = "home/his8.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+[31m-              <p>영국의 외교관, 역사학'역사란 단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+[31m-                <p class = "writer">by 이동해</p>[m
+[32m+[m[32m              <p>영국의 외교관, 역사학자이자한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+[32m+[m[32m              <p class = "writer">by 이동해</p>[m
+           </section>[m
+[31m-[m
+[31m-          <section class = "col-sm-4">[m
+[31m-            <img src = "home/his.png" class="img-rounded img-responsive">[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class = "col-sm-4 mb-section">[m
+[32m+[m[32m          <section>[m
+[32m+[m[32m            <img src = "home/his9.png" class="img-rounded img-responsive">[m
+               <h2>역사란 무엇인가?</h2><br>[m
+[31m-              <p>영국의 외교관, 역사학자이자 정치학자. 한국에서는 'E. H. 카'라는 이름으로 더 많이 불린다.[m
+[31m-                1892년 영국에서 태어나 케임브리지 대학교의 트리니티 칼리지를 졸업하였다. 1차대전 시기부터 전간기 말까지 영국 외무부에서 외교관으로 근무했으며, 1936년 사임한 후 학자의 길을 걸었다. 그의 이름을 떨친 저작은 역사철학에 관한 서적인 "역사란 무엇인가"와 현실주의 국제정치학의 명저 "20년의 위기"이지만, 정작 그가 평생을 바친 연구대상은 역사철학이나 국제정치학이 아니라 소련사였다. 카는 소련사 분야에서도 걸출한 연구자였으나 소련편향적으로 역사를 서술한다고 비판도 많이 받았는데[1], 덕분에 군사독재 시절 한국에선 "역사란 무엇인가"를 비롯한 그의 저작이 불온서적 취급을 받기도 했다.[m
+[31m-                카는 "역사란 무엇인가"에서 '역사란 단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+[31m-                <p class = "writer">by 이성준</p>[m
+[32m+[m[32m              <p>영국의 외교관, 역사학자이자 단순한 사실의 나열이 아니다'라는 문제의식을 제시하며 다음과 같이 주장했다.</p>[m
+[32m+[m[32m              <p class = "writer">by 이성준</p>[m
+           </section>[m
+[31m-      </div>      [m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+   </article>[m
+   [m
+[31m-  </div>[m
+ </div>[m
+[31m-<footer class="container-fluid">[m
+[31m-  <p>Footer Text</p>[m
+[31m-</footer>[m
+\ No newline at end of file[m
+[32m+[m[32m<!--내용들 끝-->[m
+\ No newline at end of file[m
+[1mdiff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb[m
+[1mindex 1e9e9e7..906e0d8 100644[m
+[1m--- a/app/views/layouts/application.html.erb[m
+[1m+++ b/app/views/layouts/application.html.erb[m
+[36m@@ -1,13 +1,17 @@[m
+ <!DOCTYPE html>[m
+[31m-<html>[m
+[32m+[m[32m<html lang="ko">[m
+ <head>[m
+   <title>히스토리컬</title>[m
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>[m
+   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>[m
+   <%= csrf_meta_tags %>[m
+[32m+[m[32m  <meta charset="utf-8">[m
+[32m+[m[32m  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">[m
+   [m
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">[m
+[32m+[m[32m<link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">[m
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>[m
+[32m+[m[32m<!--jquery import -->[m
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>[m
+ <!-- 부트스트랩 import -->[m
+ <script src="https://unpkg.com/vue@2.3.3"></script>[m
+[36m@@ -15,7 +19,51 @@[m
+ [m
+ </head>[m
+ <body>[m
+[32m+[m[32m<!--모바일에서 보여질 nav-->[m
+[32m+[m[32m<nav class="navbar navbar-inverse visible-xs">[m
+[32m+[m[32m  <div class="container-fluid">[m
+[32m+[m[32m    <div class="navbar-header">[m
+[32m+[m[32m      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">[m
+[32m+[m[32m        <span class="icon-bar"></span>[m
+[32m+[m[32m        <span class="icon-bar"></span>[m
+[32m+[m[32m        <span class="icon-bar"></span>[m[41m                        [m
+[32m+[m[32m      </button>[m
+[32m+[m[32m      <img src = "home/logo.png" class = "img-circle img-fluid logo-xs">[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m    <div class="collapse navbar-collapse" id="myNavbar">[m
+[32m+[m[32m      <ul class="nav navbar-nav">[m
+[32m+[m[32m        <li><a href = "#">기고칼럼</a></li>[m
+[32m+[m[32m        <li><a href = "#">히스토리컬</a></li>[m
+[32m+[m[32m        <li><a href = "#">신간도서</a></li>[m
+[32m+[m[32m      </ul>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m  </div>[m
+[32m+[m[32m</nav>[m
+[32m+[m[32m<!-- 모바일에서 보여 질 nav 끝 -->[m
+ [m
+[32m+[m[32m<!-- 웹에서 보여질 nav -->[m
+[32m+[m[32m<nav class="navbar hidden-xs" id ="sideNav">[m
+[32m+[m[41m  [m
+[32m+[m[32m  <a class="navbar-brand js-scroll-trigger" href="#page-top">[m
+[32m+[m[32m    <span class="d-none d-lg-block">[m
+[32m+[m[32m      <img class="img-fluid rounded-circle img-profile" src = "home/logo.png">[m
+[32m+[m[32m    </span>[m
+[32m+[m[32m  </a>[m
+[32m+[m[41m  [m
+[32m+[m[32m  <div class="collapse navbar-collapse" id="navbarSupportedContent">[m
+[32m+[m[32m    <ul class="navbar-nav" style="padding-left: 0px;">[m
+[32m+[m[32m      <li><input type="text" class="form-control" placeholder="Search"></li>[m
+[32m+[m[32m      <li class="active" id = "column"><a href = "#">기고칼럼</a></li>[m
+[32m+[m[32m      <li id = "historical"><a href = "#">히스토리컬</a></li>[m
+[32m+[m[32m      <li id = "newBook"><a href = "#">신간도서</a></li>[m
+[32m+[m[32m      <li id = "contact"><a href = "#">contact us</a></li>[m
+[32m+[m[32m      <li id = "about"><a href = "#">about us</a></li>[m
+[32m+[m[32m      <li id = "facebookc"><img class = "rounded-circle logo" src = "home/facebook.jpg"></li>[m
+[32m+[m[32m    </ul>[m
+[32m+[m[41m    [m
+[32m+[m[32m  </div>[m
+[32m+[m[32m</nav>[m
+[32m+[m[32m<!--웹에서 보여질 nav 끝-->[m
+ <%= yield %>[m
+ [m
+ </body>[m
+[1mdiff --git a/log.txt b/log.txt[m
+[1mindex 9bb1098..1ad9194 100644[m
+[1m--- a/log.txt[m
+[1m+++ b/log.txt[m
+[36m@@ -1,3 +1,10 @@[m
+[32m+[m[32m0801 자룡[m
+[32m+[m[32m    로고 크기 및 디테일 수정[m
+[32m+[m[32m    nav를 application으로 이동[m
+[32m+[m
+[32m+[m[32m0716 자룡[m
+[32m+[m[32m    디테일 수정 중[m
+[32m+[m
+ 0715 석원[m
+     users 컨트롤러 생성[m
+     routes.rb 수정[m
+[1mdiff --git a/public/home/city.jpg b/public/home/city.jpg[m
+[1mindex 91c0954..c255a2d 100644[m
+Binary files a/public/home/city.jpg and b/public/home/city.jpg differ

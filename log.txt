@@ -16,6 +16,7 @@
     (웹버젼 nav바 text:hover)
     파비콘 하단부분 화이트스페이스 남지 않도록 crop
 
+
 0801 자룡
     로고 크기 및 디테일 수정
     nav를 application으로 이동
