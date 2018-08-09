@@ -1,6 +1,49 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//로그인 및 회원가입
+//로그인 파일 경로      : view/passwords/sessions/new
+//회원가입 파일경로     : view/passwords/registrations/new 
+.login-form , .reg-form {
+    padding : 15px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color:#EEEFF1;
+    width:300px;
+    margin:auto;
+    background-color: #EEEFF1;
+}
+
+#user_email , #user_password , #user_password_confirmation{
+    padding:10px;
+    width:260px;
+    margin-top:10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.submit-btn>input {
+    border-radius: 5px;
+    width:260px;
+    margin-top:10px;
+    font-size: 14px;
+    background-color:black;
+    padding:10px;
+    color:#FFFFFF;
+}
+
+.submit-btn>input:hover {
+    border-radius: 5px;
+    width:260px;
+    margin-top:10px;
+    font-size: 14px;
+    background-color: gray;
+    padding:10px;
+    color:#FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+}
+//로그인 , 밑 회원가입 끝
+
 
 .topHeader {
      margin-top : 10px;

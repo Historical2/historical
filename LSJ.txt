@@ -2,3 +2,5 @@
 https://luciuschoi.gitbooks.io/exploring_devise/content/user_authorization/
 cancancan rolify
 http://dogbok.tistory.com/87
+숙명여대 권한 설정
+http://sookmyunglion.tistory.com/6
