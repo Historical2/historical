@@ -10,7 +10,7 @@
     border-radius: 5px;
     border-color:#EEEFF1;
     width:300px;
-    margin:auto;
+    margin:10px auto;
     background-color: #EEEFF1;
 }
 
@@ -30,26 +30,23 @@
     background-color:black;
     padding:10px;
     color:#FFFFFF;
+    
+    &:hover {
+        border-radius: 5px;
+        width:260px;
+        margin-top:10px;
+        font-size: 14px;
+        background-color: gray;
+        padding:10px;
+        color:#FFFFFF;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+    }
 }
 
-.submit-btn>input:hover {
-    border-radius: 5px;
-    width:260px;
-    margin-top:10px;
-    font-size: 14px;
-    background-color: gray;
-    padding:10px;
-    color:#FFFFFF;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
-}
 //로그인 , 밑 회원가입 끝
 
-
 .topHeader {
-     margin-top : 10px;
-     margin-left : 100px;
-     margin-right: 100px;
-     margin-bottom : 10px;
+    padding : 10px 100px;
      
      .date {
          margin-top : 30px;
@@ -57,48 +54,50 @@
      .name {
          margin-left : 15px;
      }
+     
+     h2 {
+          font-size : 45px;
+          font-weight : bold;
+          text-align: center;
+    }
+}
+
+.sideContent {
+    h3 {
+        font-weight:bolde;
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1.3rem;
+        padding:0px;
+    }
+    .sideImg {
+        width : 200px;
+        height : 150px;
+    }
 }
 
 
-h2 {
-  font-size : 45px;
-  font-weight : bold;
-  text-align:center;
-}
-
-.sideContent h3 {
-    font-weight:bolde;
-    font-size: 1.5rem;
-}
-.sideContent p{
-    font-size: 1.3rem;
-    padding:0px;
-}
-
-.sideContent .sideImg {
-    width : 200px;
-    height : 150px;
-}
-
-.profile img {
-    width:60px;
-    height:60px;
-    border-radius: 50% !important;
-}
-.profile .name{
-    font-size: 1.5rem;
-}
-
-.profile {
+.profile  {
     height : 100px;
     vertical-align:middle;
-}
+    
+    img{
+        width:60px;
+        height:60px;
+        border-radius: 50% !important;
+    }
+    .name{
+        font-size: 1.5rem;
+    }
+    .date { 
+        vertical-align : middle;
+        float:right;
+        font-size:1.5rem;
+        height:70px;
+    }
 
-.profile .date { 
-    vertical-align : middle;
-    float:right;
-    font-size:1.5rem;
-    height:70px;
 }
 
 .line {
@@ -108,17 +107,21 @@ h2 {
 }
 
 .mainContent {
+    padding:0 100px;
     width:100%;
+    img {
+        width: 500px;
+        height : 400px;
+        display:block;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    .mainContent p {
+        font-size : 2rem;
+    }
 }
 
-.mainContent img {
-    width: 500px;
-    height : 400px;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-section .mainContent p {
-    font-size : 2rem;
+.col-sm-2 {
+    padding-left : 0px!important;
 }

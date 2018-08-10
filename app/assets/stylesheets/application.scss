@@ -25,19 +25,19 @@
     overflow-x: hidden;
     padding-top: 60px;
     text-align:center;
-}
-
-.msidenav a {
-    font-size: 25px;
-    display: block;
-}
-
-.msidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    a {
+        font-size: 25px;
+        display: block;
+    }
 }
 
 .test:last-child {

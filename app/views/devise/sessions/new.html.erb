@@ -1,15 +1,17 @@
-<h2>로그인</h2>
+<div class = "topHeader">
+  <h2>로그인</h2>
+</div>
 
 <div class = "login-form">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field text-field">
       <%= f.label :email, "이메일" %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: '아이디' %>
     </div>
   
     <div class="field text-field">
       <%= f.label :password ,"비밀번호"%><br />
-      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.password_field :password, autocomplete: "off" , placeholder: '비밀번호'%>
     </div>
   
     <% if devise_mapping.rememberable? -%>

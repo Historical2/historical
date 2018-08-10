@@ -152,7 +152,6 @@ button {
   #sideNav .navbar-brand .img-profile {
     max-width: 20rem;
     max-height: 20rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
   }
   //왼쪽 로고 크기 변경 조금 더 크게 만듬
   #sideNav .navbar-collapse {
@@ -198,13 +197,17 @@ a {
   100% {background-color: grey;
   }
 }
-.active, .test {
+.test {
   &:hover {
   animation-name : grad;
   animation-timing-function: ease-in-out;
   animation-duration : 0.5s;
   animation-fill-mode : forwards;
   }
+}
+
+.active {
+  background-color:gray;
 }
 //메뉴 호버 시 하이라이트 처리를 위해 추가
 
