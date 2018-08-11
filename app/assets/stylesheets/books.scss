@@ -1,6 +1,123 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+//좌측 섹션 전체를 감싸는 CSS
+
+.container-fluid .instantContainer {
+    padding : 0px 80px;
+    height: 100%;
+    margin-top : 5px;
+    border-radius : 15px;
+    //box-shadow: 0 0 1px rgba(#222, .5);
+    border : 5px solid #333;
+    border-left: none;
+    border-right : none;
+    overflow : auto;
+    
+    .profile  {
+        height : 100px;
+        vertical-align:middle;
+        
+        img{
+            width:60px;
+            height:60px;
+            border-radius: 50% !important;
+        }
+        .name{
+            font-size: 1.5rem;
+        }
+        .date { 
+            vertical-align : middle;
+            float:right;
+            font-size:1.5rem;
+            height:70px;
+        }
+    }
+    
+    .line {
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 1px solid black;
+        animation-name : emerge;
+        animation-timing-function : ease-in-out;
+        animation-fill-mode : forwards;
+        animation-duration : 1s;
+        @keyframes emerge {
+            0% {
+                transform : scaleX(0);
+            }
+            100% {
+                transform : scaleX(1);
+            }
+        }
+    }
+    
+    .mainContent {
+        width:100%;
+        .imgContainer {
+            width: 500px;
+            height : 400px;
+            display:block;
+            margin: 0 auto;
+            border-radius : 15px;
+            
+        .skewedTape {
+            color : white;
+            position: absolute;
+            margin-top: 15px;
+            margin-left : 10px;
+            height: auto;
+            text-align : center;
+            width : 130px;
+            background-color : red;
+            padding : 2px;
+            border: 2px solid red;
+            border-radius : 5px;
+            transform : rotate(135deg);
+                .tagTape {
+                    width : inherit;
+                    height : inherit;
+                    transform : rotate(178deg);
+                }
+            }
+            
+        img {
+                width: inherit;
+                height: inherit;
+                border-radius: inherit;
+            // width: 500px;
+            // height : 400px;
+            // display:block;
+            // margin-left:auto;
+            // margin-right:auto;
+            // border-radius : 15px;
+            }
+        }
+        .mainContent p {
+            font-size : 2rem;
+        }
+    }
+}
+
+.mcon .container-fluid .instantContainer {
+    
+    
+}
+
+.topHeader {
+     .date {
+         margin-top : 30px;
+     }
+     .name {
+         margin-left : 15px;
+     }
+     
+     h2 {
+          font-size : 40px;
+          font-weight : bold;
+          text-align: center;
+    }
+}
 //로그인 및 회원가입
 //로그인 파일 경로      : view/passwords/sessions/new
 //회원가입 파일경로     : view/passwords/registrations/new 
@@ -42,25 +159,7 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
     }
 }
-
 //로그인 , 밑 회원가입 끝
-
-.topHeader {
-    padding : 10px 100px;
-     
-     .date {
-         margin-top : 30px;
-     }
-     .name {
-         margin-left : 15px;
-     }
-     
-     h2 {
-          font-size : 45px;
-          font-weight : bold;
-          text-align: center;
-    }
-}
 
 .sideContent {
     h3 {
@@ -72,56 +171,9 @@
         font-size: 1.3rem;
         padding:0px;
     }
+    
     .sideImg {
         width : 200px;
         height : 150px;
     }
-}
-
-
-.profile  {
-    height : 100px;
-    vertical-align:middle;
-    
-    img{
-        width:60px;
-        height:60px;
-        border-radius: 50% !important;
-    }
-    .name{
-        font-size: 1.5rem;
-    }
-    .date { 
-        vertical-align : middle;
-        float:right;
-        font-size:1.5rem;
-        height:70px;
-    }
-
-}
-
-.line {
-    margin-bottom: 20px;
-    border: 0;
-    border-top: 1px solid black;
-}
-
-.mainContent {
-    padding:0 100px;
-    width:100%;
-    img {
-        width: 500px;
-        height : 400px;
-        display:block;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    
-    .mainContent p {
-        font-size : 2rem;
-    }
-}
-
-.col-sm-2 {
-    padding-left : 0px!important;
 }

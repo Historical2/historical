@@ -20,13 +20,14 @@
 //작성자 css
 
 .mainSection {
-  box-shadow: 2.5px 5px 5px 2.5px grey;
-  margin: 2.5px 0px 5px 0px;
+  box-shadow: 1.5px 3px 3px 1.5px grey;
+  margin: 15px 0;
   text-align: left;
   transition: all ease 0.5s;
+  
   &:hover {
-  box-shadow: 3px 3px 3px 3px grey;
-  transform: scale(1.02);
+    box-shadow: 1px 1px 1px 1px grey;
+    transform: scale(1.02);
   }
 }
 
@@ -38,92 +39,87 @@
 
 @media (max-width:768px){
 //모바일 CSS 시작
-.logo-xs {
-    width : 100px;
-}
-.mb-section {
-  padding : 5px;
-  margin : 5px 10px 5px 10px;
-}
-.mainSection {
-  padding : 10px;
-  font-family: 'Do Hyeon', sans-serif;
-  font-size : 20px;
-
-  h2 {
-      font-size : 45px;
-      font-weight : bold;
-      padding-left : 5px;
+  .logo-xs {
+      width : 100px;
   }
   
-}
+  .mb-section {
+    padding : 5px;
+    margin : 5px 10px 5px 10px;
+  }
+  
+  .mainSection {
+    padding : 10px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size : 20px;
+  
+    h2 {
+        font-size : 30px;
+        font-weight : bold;
+        padding-left : 5px;
+        text-align: center;
+    }
+  }
 
-
-
-p {
-  padding : 5px;
-}
-.img-responsive {
-  height : 350px!important;
-  width: 95%;
-  margin-top: 10px;
-}
-
+  p {
+    padding : 5px;
+    font-size: 15px;
+  }
+  
+  .img-responsive {
+    height : 250px!important;
+    width: 95%;
+    margin-top: 10px;
+  }
 
 //모바일에 로고 크기 변경
-.navbar-header {
-  text-align : center;
-}
-
-.img-responsive {
-    margin-right: auto;
-    margin-left: auto;
-    line-height: 100%;
-}
-
-button {
-  float: left;
-}
+  .navbar-header {
+    text-align : center;
+  }
+  
+  .img-responsive {
+      margin-right: auto;
+      margin-left: auto;
+      line-height: 100%;
+  }
+  
+  button {
+    float: left;
+  }
 }
 //사진들 가운데 정렬
 //모바일 CSS 끝
 
 
-
 //웹버젼 css
-@media (min-width: 768px) {
+@media (min-width:768px){
   body {
     padding-top: 0;
     padding-left: 250px;
   }
-}
-
-@media (min-width:768px){
-  // .mb-section {
-  //   padding : 5px;
-  //   margin : 5px 10px 5px 10px;
-  // }
+  
   section {
-    //padding : 10px;
+    padding : 20px;
     font-family: 'Do Hyeon', sans-serif;
-    //font-size : 20px;
   }
+  
   section h2 {
-    font-size : 4.5rem;
+    font-size : 4rem;
     font-weight : bold;
     padding-left : 5px;
+    text-align : center;
   }
+  
   p {
     padding : 5px;
   }
+  
   .img-responsive {
-    height : 350px!important;
+    height : 250px!important;
     width: 100%;
-    margin-top: 7.0rem;
   }
+  
 }
-
-
 
 //네비바 css
 @media (min-width: 768px) {
@@ -182,7 +178,6 @@ button {
       width:50px;
       height:50px;
     }
-    
 }
 
 a {
@@ -191,12 +186,12 @@ a {
   text-decoration : none !important;
 }
 //왼쪽 네비 글자색, 밑 줄 변경, bootstrap에 색이 적용 되어 있어 important 적용
+
 @keyframes grad {
-  0% {background-color: transparent;
-  }
-  100% {background-color: grey;
-  }
+  0% {background-color: transparent;}
+  100% {background-color: grey;}
 }
+
 .test {
   &:hover {
   animation-name : grad;
